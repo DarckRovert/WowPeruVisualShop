@@ -23,7 +23,7 @@ local PREFIX  = "WPVS"
 local ALT_PREFIX = "WP_VISUAL"
 local C       = WowPeruVisualCatalog
 
-local ICON_PATH = "Interface\\AddOns\\Jaina_VisualShop\\iconos\\"
+local ICON_PATH = "Interface\\AddOns\\ProjectJaina_VisualShop\\iconos\\"
 local ICON_FALLBACK = "Interface\\Icons\\Spell_Holy_AuraOfLight"
 
 -- Las alas que se mueven traen una LAMINA: una rejilla de 8x4 con 32 fotogramas
@@ -131,11 +131,12 @@ shop:Hide()
 -- Cerrar con ESC.
 tinsert(UISpecialFrames, "ProjectJaina_VisualShopFrame")
 
--- Logo Oficial de Project Jaina
+-- Logo Oficial de Project Jaina (Ratio 1:1 circular)
 local logo = shop:CreateTexture(nil, "ARTWORK")
-logo:SetSize(84, 42)
+logo:SetSize(42, 42)
 logo:SetPoint("TOPLEFT", shop, "TOPLEFT", PAD, -10)
-logo:SetTexture("Interface\\AddOns\\Jaina_VisualShop\\Textures\\jaina_logo.tga")
+logo:SetTexture("Interface\\AddOns\\ProjectJaina_VisualShop\\Textures\\jaina_logo.tga")
+logo:SetBlendMode("BLEND")
 shop.logo = logo
 
 local title = shop:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
